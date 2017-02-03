@@ -1,0 +1,8 @@
+service network-manager stop
+airmong-ng start wlan0
+airodump-ng wlan0mon
+
+airodump-ng --bssid 00:00:00:00:00:00 --channel 2 --write basic-test wlan0mon
+
+"new window"
+aircrack-ng basic-test-01.cap

